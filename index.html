@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Stuff</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #fff;
+            color: #1d1d1f;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.08349;
+            font-weight: 600;
+            letter-spacing: -0.003em;
+            margin-bottom: 60px;
+            background: linear-gradient(90deg, #1d1d1f 0%, #86868b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 21px;
+            line-height: 1.19048;
+            font-weight: 600;
+            letter-spacing: 0.011em;
+            color: #86868b;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+        }
+
+        .file-grid {
+            display: grid;
+            gap: 12px;
+        }
+
+        .file-link {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            background: #fbfbfd;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1d1d1f;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .file-link:hover {
+            background: #f5f5f7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .file-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0071e3 0%, #40c8e0 100%);
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .file-link:hover::before {
+            transform: translateY(0);
+        }
+
+        .file-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        .file-name {
+            font-size: 17px;
+            line-height: 1.23536;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            flex-grow: 1;
+        }
+
+        .file-type {
+            font-size: 12px;
+            color: #86868b;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            background: rgba(134, 134, 139, 0.1);
+            border-radius: 6px;
+        }
+
+        @media (max-width: 735px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .file-link {
+                padding: 12px 16px;
+            }
+
+            .file-icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 12px;
+            }
+
+            .file-name {
+                font-size: 15px;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #000;
+                color: #f5f5f7;
+            }
+
+            h1 {
+                background: linear-gradient(90deg, #f5f5f7 0%, #86868b 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .file-link {
+                background: #1d1d1f;
+                color: #f5f5f7;
+            }
+
+            .file-link:hover {
+                background: #2d2d2f;
+            }
+
+            .file-type {
+                background: rgba(134, 134, 139, 0.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Technical Stuff</h2>
+        
+        <div class="section">
+            <div class="section-title">Pages</div>
+            <div class="file-grid">
+                <a href="test-1.html" class="file-link">
+                    <svg class="file-icon" viewBox="0 0 32 32" fill="none">
+                        <rect x="6" y="4" width="20" height="24" rx="2" stroke="#0071e3" stroke-width="1.5"/>
+                        <line x1="10" y1="10" x2="22" y2="10" stroke="#0071e3" stroke-width="1.5"/>
+                        <line x1="10" y1="14" x2="22" y2="14" stroke="#0071e3" stroke-width="1.5"/>
+                        <line x1="10" y1="18" x2="18" y2="18" stroke="#0071e3" stroke-width="1.5"/>
+                    </svg>
+                    <span class="file-name">Augestine / Python</span>
+                    <span class="file-type">HTML</span>
+                </a>
+
+                <a href="page2.html" class="file-link">
+                    <svg class="file-icon" viewBox="0 0 32 32" fill="none">
+                        <rect x="6" y="4" width="20" height="24" rx="2" stroke="#0071e3" stroke-width="1.5"/>
+                        <line x1="10" y1="10" x2="22" y2="10" stroke="#0071e3" stroke-width="1.5"/>
+                        <line x1="10" y1="14" x2="22" y2="14" stroke="#0071e3" stroke-width="1.5"/>
+                        <line x1="10" y1="18" x2="18" y2="18" stroke="#0071e3" stroke-width="1.5"/>
+                    </svg>
+                    <span class="file-name">Page 2</span>
+                    <span class="file-type">HTML</span>
+                </a>
+
+                <!-- Add more HTML files here -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Documents</div>
+            <div class="file-grid">
+                <a href="test-1.pdf" class="file-link">
+                    <svg class="file-icon" viewBox="0 0 32 32" fill="none">
+                        <rect x="6" y="4" width="20" height="24" rx="2" stroke="#ff3b30" stroke-width="1.5"/>
+                        <path d="M11 20V16H13C13.5 16 14 16.5 14 17C14 17.5 13.5 18 13 18H11" stroke="#ff3b30" stroke-width="1.5"/>
+                        <path d="M16 16H18C18.5 16 19 16.5 19 17V19C19 19.5 18.5 20 18 20H16V16Z" stroke="#ff3b30" stroke-width="1.5"/>
+                        <path d="M21 16H23M22 16V20" stroke="#ff3b30" stroke-width="1.5"/>
+                    </svg>
+                    <span class="file-name">Augestine / Python</span>
+                    <span class="file-type">PDF</span>
+                </a>
+
+                <a href="document2.pdf" class="file-link">
+                    <svg class="file-icon" viewBox="0 0 32 32" fill="none">
+                        <rect x="6" y="4" width="20" height="24" rx="2" stroke="#ff3b30" stroke-width="1.5"/>
+                        <path d="M11 20V16H13C13.5 16 14 16.5 14 17C14 17.5 13.5 18 13 18H11" stroke="#ff3b30" stroke-width="1.5"/>
+                        <path d="M16 16H18C18.5 16 19 16.5 19 17V19C19 19.5 18.5 20 18 20H16V16Z" stroke="#ff3b30" stroke-width="1.5"/>
+                        <path d="M21 16H23M22 16V20" stroke="#ff3b30" stroke-width="1.5"/>
+                    </svg>
+                    <span class="file-name">Document 2</span>
+                    <span class="file-type">PDF</span>
+                </a>
+
+                <!-- Add more PDF files here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
+
